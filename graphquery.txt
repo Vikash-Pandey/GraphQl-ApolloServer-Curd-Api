@@ -1,0 +1,34 @@
+query getUserlist {
+  AllUser {
+    _id
+    email
+    name
+  }
+}
+
+
+mutation createUser($userNew:userInput){
+    CreateUser(userNew:$userNew){
+      name,
+      email
+    }
+  }
+
+
+mutation UpdateUser($userNew:userInput){
+    UpdateUser(_id:"6273c00cc692a9f8e8bbc8e8",userNew:$userNew){
+    _id,
+      name,
+      email
+    }
+  }
+
+
+
+  mutation {
+    DeleteUser(_id:"6273bb44d930b4e1afd4ea14"){
+    _id,
+      name,
+      email
+  }
+  }
